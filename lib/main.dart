@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:regicash2/screens/accueil.dart';
 import 'package:regicash2/screens/annconces.dart';
-import 'package:regicash2/screens/authentification.dart';
 import 'package:regicash2/screens/demarrage.dart';
 
 void main() {
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Annonce(),
+      home: const demarrage(),
     );
   }
 }

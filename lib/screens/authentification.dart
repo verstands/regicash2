@@ -35,11 +35,16 @@ class _LoginState extends State<Login> {
                 SizedBox(
                   height: 60,
                   width: 300,
-                  child: ElevatedButton(
-                    onPressed: () {
-                       Navigator.push(context, MaterialPageRoute(builder: (context) => const accueil() ));
-                    }, 
-                    child: const Text("VALIDER")),
+                  child:Container(
+                       decoration:const BoxDecoration(
+                         borderRadius: BorderRadius.only(topLeft: Radius.circular(50), topRight: Radius.circular(50)),
+                       ),
+                       child : ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const accueil() ));
+                        }, 
+                        child: const Text("VALIDER")),
+                  ),
                 ),
              ],
           ),

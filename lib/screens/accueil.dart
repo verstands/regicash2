@@ -20,7 +20,8 @@ class _accueilState extends State<accueil> {
              IconButton(onPressed: null, icon: Icon(Icons.search),),
            ],
         ),
-        drawer: ListView(
+        drawer: Drawer(
+           child:  ListView(
            padding: EdgeInsets.zero,
            children: [
               SizedBox(
@@ -28,15 +29,21 @@ class _accueilState extends State<accueil> {
                  child:  DrawerHeader(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        SizedBox(
-                         height: 50,
-                         width: 50,
-                         child :Image(image: AssetImage('assets/images/user.PNG')),
+                      children:  [                        
+                        Container(
+                          decoration: const BoxDecoration(
+                            color: Colors.red,
+                             borderRadius: BorderRadius.only(topLeft: Radius.circular(50), topRight: Radius.circular(50)),
+                          ),
+                          child: const SizedBox(
+                             height: 50,
+                             width: 50,
+                             child: Image(image: AssetImage('assets/images/user.PNG')),
+                          ),
                         ),
-                        SizedBox(height: 10,),
-                        Text("Rabby Kikwele"),
-                        Text("12345698"),
+                        const SizedBox(height: 10,),
+                       const Text("Rabby Kikwele"),
+                        const Text("12345698"),
                       ],                  
                   ),
                 decoration: const BoxDecoration(color: Colors.blue),
@@ -44,18 +51,18 @@ class _accueilState extends State<accueil> {
               ),
               
               Container(
-                color: Colors.blue,
                  child: Column(
                    children: const [
-                       ListTile( title: Text("Annonce", style: TextStyle(color: Colors.white),),  onTap: null,),
-                       ListTile( title: Text("Paiement", style: TextStyle(color: Colors.white)), onTap: null,),
-                       ListTile( title: Text("Publicité", style: TextStyle(color: Colors.white)), onTap: null,),
-                       ListTile( title: Text("Historique", style: TextStyle(color: Colors.white)), onTap: null,),
-                       ListTile( title: Text("Se deconnecter", style: TextStyle(color: Colors.white)), onTap: null,),
+                       ListTile( title: Text("Annonce", style: TextStyle(color: Colors.black),),  onTap:  null,),
+                       ListTile( title: Text("Paiement", style: TextStyle(color: Colors.black)), onTap: null,),
+                       ListTile( title: Text("Publicité", style: TextStyle(color: Colors.black)), onTap: null,),
+                       ListTile( title: Text("Historique", style: TextStyle(color: Colors.black)), onTap: null,),
+                       ListTile( title: Text("Se deconnecter", style: TextStyle(color: Colors.black)), onTap: null,),
                    ],
                  ),
               )
            ],
+        ),
         ),
         body: Padding(
           padding: EdgeInsets.all(20),

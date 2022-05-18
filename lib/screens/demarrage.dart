@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:regicash2/screens/authentification.dart';
 
 class demarrage extends StatefulWidget {
   const demarrage({ Key? key }) : super(key: key);
@@ -8,6 +11,17 @@ class demarrage extends StatefulWidget {
 }
 
 class _demarrageState extends State<demarrage> {
+  @override
+  void _teste(){
+     Timer(Duration(seconds: 3), () => Navigator.pushReplacement(
+       context,
+       MaterialPageRoute(builder: (context) => const Login())));
+  }
+  @override
+  void initState(){
+    super.initState();
+    _teste();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
