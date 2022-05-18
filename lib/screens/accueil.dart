@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:regicash2/partials/footer.dart';
 import 'package:regicash2/screens/annconces.dart';
+import 'package:regicash2/screens/methode_paiement.dart';
 
 class accueil extends StatefulWidget {
   const accueil({ Key? key }) : super(key: key);
@@ -10,6 +11,7 @@ class accueil extends StatefulWidget {
 }
 
 class _accueilState extends State<accueil> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,13 +53,14 @@ class _accueilState extends State<accueil> {
               ),
               
               Container(
+                padding: EdgeInsets.all(15),
                  child: Column(
-                   children: const [
-                       ListTile( title: Text("Annonce", style: TextStyle(color: Colors.black),),  onTap:  null,),
-                       ListTile( title: Text("Paiement", style: TextStyle(color: Colors.black)), onTap: null,),
-                       ListTile( title: Text("Publicité", style: TextStyle(color: Colors.black)), onTap: null,),
-                       ListTile( title: Text("Historique", style: TextStyle(color: Colors.black)), onTap: null,),
-                       ListTile( title: Text("Se deconnecter", style: TextStyle(color: Colors.black)), onTap: null,),
+                   children:  [
+                       ListTile( title: const Text("Annonce", style: TextStyle(color: Colors.black),),  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Annonce())),),
+                       ListTile( title:const Text("Paiement", style: TextStyle(color: Colors.black)), onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Mpaiement())),),
+                       ListTile( title: const Text("Publicité", style: TextStyle(color: Colors.black)), onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Annonce())),),
+                       ListTile( title: const Text("Historique", style: TextStyle(color: Colors.black)), onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Annonce())),),
+                       ListTile( title: const Text("Se deconnecter", style: TextStyle(color: Colors.black)), onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Annonce())),),
                    ],
                  ),
               )
@@ -65,7 +68,7 @@ class _accueilState extends State<accueil> {
         ),
         ),
         body: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: ListView(
              children: [
                 Container(
